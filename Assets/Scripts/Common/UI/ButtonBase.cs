@@ -7,7 +7,7 @@ public abstract class ButtonBase : MonoBehaviour, IClickable
 {
     public abstract void Click();
 
-    void Start()
+    protected void Start()
     {
         Button button = GetComponent<Button>();
         if (!button)

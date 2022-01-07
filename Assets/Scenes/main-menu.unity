@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &84954464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6298971615621555135, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+  m_PrefabInstance: {fileID: 2084852263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &102439862
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +262,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102439862}
   m_CullTransparentMesh: 1
+--- !u!1 &120189396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5494474165557515095, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+  m_PrefabInstance: {fileID: 2084852263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &120189400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120189396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ce55155a2d92949a07ff4cfe106af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkboxImage: {fileID: 84954464}
 --- !u!1 &231180469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3312098758877485127, guid: d98956ec51cf81d4d9c687c19081c5ea, type: 3}
@@ -527,6 +550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VSync Checkbox
       objectReference: {fileID: 0}
+    - target: {fileID: 6298971615621555135, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8034675492420020167, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.9299011
@@ -560,6 +587,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3312098758877485126, guid: d98956ec51cf81d4d9c687c19081c5ea, type: 3}
   m_PrefabInstance: {fileID: 1971791367}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &714113277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5494474165557515095, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+  m_PrefabInstance: {fileID: 465906845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &714113281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714113277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9428c56f563622b488e29b4ef90808c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkboxImage: {fileID: 1674655889}
 --- !u!1001 &839356383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -822,6 +867,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073177901}
   m_CullTransparentMesh: 1
+--- !u!1 &1289736745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6298971615621555135, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+  m_PrefabInstance: {fileID: 8272083487749874631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1360022170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1209,11 @@ RectTransform:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3312098758877485126, guid: d98956ec51cf81d4d9c687c19081c5ea, type: 3}
   m_PrefabInstance: {fileID: 3312098758277410449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1674655889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6298971615621555135, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+  m_PrefabInstance: {fileID: 465906845}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733535135
 GameObject:
@@ -1873,6 +1928,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d98956ec51cf81d4d9c687c19081c5ea, type: 3}
+--- !u!1 &2068959871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5494474165557515095, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+  m_PrefabInstance: {fileID: 8272083487749874631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2068959872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068959871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8b07725b339a346bfea50903e7bdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkboxImage: {fileID: 1289736745}
 --- !u!1001 &2084852263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1967,6 +2040,10 @@ PrefabInstance:
     - target: {fileID: 5494474165557515095, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
       propertyPath: m_Name
       value: Sound Checkbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298971615621555135, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8034675492420020167, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2202,6 +2279,10 @@ PrefabInstance:
     - target: {fileID: 5494474165557515095, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
       propertyPath: m_Name
       value: Fullscreen Checkbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298971615621555135, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8034675492420020167, guid: 5cdb029eeaa42364cb0a87f8ca9329e5, type: 3}
       propertyPath: m_AnchoredPosition.x

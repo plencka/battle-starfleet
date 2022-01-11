@@ -15,7 +15,7 @@ public class Checkbox_Fullscreen : CheckboxBase
 
     public override void Click()
     {
-        base.Click();
+        Toggle();
 
         Screen.fullScreen = isToggled;
     }

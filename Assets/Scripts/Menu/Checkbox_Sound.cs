@@ -14,7 +14,7 @@ public class Checkbox_Sound : CheckboxBase
     }
     public override void Click()
     {
-        base.Click();
+        Toggle();
 
         if (isToggled) AudioListener.volume = 1f;
         else AudioListener.volume = 0f;

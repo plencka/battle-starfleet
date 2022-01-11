@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckboxBase : ButtonBase
+public abstract class CheckboxBase : ButtonBase
 {
     protected bool isToggled;
     public GameObject checkboxImage;
 
-    public override void Click()
+    public void Toggle()
     {
         if (isToggled)
         {
@@ -20,6 +20,5 @@ public class CheckboxBase : ButtonBase
 
         isToggled = !isToggled;
     }
-
 
 }

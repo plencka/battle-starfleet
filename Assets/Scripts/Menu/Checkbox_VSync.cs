@@ -14,7 +14,7 @@ public class Checkbox_VSync : CheckboxBase
     }
     public override void Click()
     {
-        base.Click();
+        Toggle();
 
         if (isToggled) QualitySettings.vSyncCount = 1;
         else QualitySettings.vSyncCount = 0;

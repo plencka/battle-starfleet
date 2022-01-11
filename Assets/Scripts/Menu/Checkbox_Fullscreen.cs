@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Checkbox_Fullscreen : ButtonBase
+public class Checkbox_Fullscreen : CheckboxBase
 {
-    bool isToggled;
-    public GameObject checkboxImage;
     void Start()
     {
         base.Start();
@@ -17,18 +15,9 @@ public class Checkbox_Fullscreen : ButtonBase
 
     public override void Click()
     {
-        if (isToggled)
-        {
-            checkboxImage.SetActive(false);
-        }
-        else
-        {
-            checkboxImage.SetActive(true);
-        }
+        base.Click();
 
-        isToggled = !isToggled;
         Screen.fullScreen = isToggled;
-
     }
 
 

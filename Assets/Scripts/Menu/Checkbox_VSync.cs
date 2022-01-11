@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkbox_VSync : ButtonBase
+public class Checkbox_VSync : CheckboxBase
 {
-    bool isToggled;
-    public GameObject checkboxImage;
 
     void Start()
     {
@@ -16,18 +14,10 @@ public class Checkbox_VSync : ButtonBase
     }
     public override void Click()
     {
-        if (isToggled)
-        {
-            checkboxImage.SetActive(false);
-            QualitySettings.vSyncCount = 0;
-        }
-        else
-        {
-            checkboxImage.SetActive(true);
-            QualitySettings.vSyncCount = 1;
-        }
-        isToggled = !isToggled;
+        base.Click();
 
+        if (isToggled) QualitySettings.vSyncCount = 1;
+        else QualitySettings.vSyncCount = 0;
     }
 
 }

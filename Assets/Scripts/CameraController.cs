@@ -9,16 +9,21 @@ public class CameraController : MonoBehaviour
     public float scrollSensitivity = 0.1f;
     public float zoomOutLimit = 10f;
 
-    public Transform selectedUnitTransform;
-    private Vector3 dragOrigin, objectOrigin, defaultPos;
     private CameraControllerData limits;
+
+    public Transform selectedUnitTransform;
     bool isTracking = false;
-    
+
+    private Vector3 dragOrigin;
+    private Vector3 objectOrigin;
+    private Vector3 defaultPos;
+    private Vector3 defaultScale;
 
     void Start()
     {
         limits = new CameraControllerData(10f, 6f, 0.2f, 10f);
         defaultPos = transform.position;
+        defaultScale = transform.localScale;
     }
 
     void Update()
@@ -56,6 +61,7 @@ public class CameraController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             transform.position = defaultPos;
+            transform.localScale = defaultScale;
         }
     }
 

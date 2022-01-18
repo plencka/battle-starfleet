@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BlasterProjectile : MonoBehaviour
@@ -7,13 +5,13 @@ public class BlasterProjectile : MonoBehaviour
     public float speed;
     public float lifetime;
 
-    private void Awake()
+    public void Awake()
     {
         Destroy(gameObject, lifetime);
     }
 
-    void Update()
+    void Start()
     {
-        transform.Translate(new Vector3(0, speed, 0) * Time.deltaTime);
+        transform.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, speed, 0));
     }
 }

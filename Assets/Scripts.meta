@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c25da8337b2a8bc40b009d6c800f4a3f
+=======
+guid: 001acc46e9313564494034efb45d64f1
+>>>>>>> 68173af (Basic ship representation)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

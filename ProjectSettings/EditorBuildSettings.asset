@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/faction-editor.unity
+    guid: 7aac504ad3fc20f489f2eb6e2fe75ef0
   m_configObjects: {}

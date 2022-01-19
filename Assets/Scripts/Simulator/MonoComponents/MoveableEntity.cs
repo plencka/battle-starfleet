@@ -38,20 +38,16 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
         }
     }
 
-    public Transform _currentTarget;
+    public GameObject _currentTarget;
 
     private Vector2 targetPoint = new Vector2(0, 0);
-    private Vector2 boundArea = new Vector2(5, 5);
+    private Vector2 boundArea = new Vector2(10, 10);
 
     private Vector2 _positionPrevious = new Vector2(0, 0);
     private Vector2 _positionCurrent = new Vector2(0, 0);
 
     private float _lastChangeTimestamp = 0;
     private readonly float _targetPointChangeDelay = 3;
-    public void Start()
-    {
-        _positionCurrent = transform.position;
-    }
 
     private void MoveTowardsPoint(Vector2 point)
     {
@@ -71,7 +67,7 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
     {
         if (_currentTarget)
         {
-            MoveTowardsPoint(_currentTarget.position);
+            MoveTowardsPoint(_currentTarget.transform.position);
         }
         else
         {
@@ -93,14 +89,14 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
         if (_currentTarget)
         {
             var index = _formationIndex+1;
-            var offset = _currentTarget.position - (_currentTarget.up * (index /2));
+            var offset = _currentTarget.transform.position - (_currentTarget.transform.up * (index /2));
             if (index % 2 == 0)
             {
-                offset += _currentTarget.right * (index);
+                offset += _currentTarget.transform.right * (index);
             }
             else
             {
-                offset += -_currentTarget.right * (index);
+                offset += -_currentTarget.transform.right * (index);
             }
             MoveTowardsPoint(offset);
         }
@@ -126,12 +122,12 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
         return _currentSpeed;
     }
 
-    public Transform GetCurrentTarget()
+    public GameObject GetCurrentTarget()
     {
         return _currentTarget;
     }
 
-    public void SetTarget(Transform target)
+    public void SetTarget(GameObject target)
     {
         _currentTarget = target;
         SetLocomotionState(LocomotionState.kFollow);

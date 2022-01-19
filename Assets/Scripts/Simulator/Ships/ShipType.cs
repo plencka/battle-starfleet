@@ -9,6 +9,9 @@ public class ShipType : ScriptableObject
     private ShipSet.ShipTypes _type;
 
     [SerializeField]
+    private GameObject vehiclePrefab;
+
+    [SerializeField]
     [Range(0f,100000f)]
 
     private float _hullPoints;
@@ -28,8 +31,22 @@ public class ShipType : ScriptableObject
     [Range(0f, 1000f)]
     private float _speed;
 
+    public Texture GetDiffuseTexture()
+    {
+        return (Texture)Resources.Load("Spaceships/"+ _textureName, typeof(Texture));
+    }
+    public Texture GetTintTexture()
+    {
+        return (Texture)Resources.Load("Spaceships/" + _textureName + "_tint", typeof(Texture));
+    }
+
     public ShipSet.ShipTypes GetShipType()
     {
         return _type;
+    }
+
+    public GameObject GetPrefab()
+    {
+        return vehiclePrefab;
     }
 }

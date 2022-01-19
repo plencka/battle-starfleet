@@ -9,7 +9,7 @@ public interface ILocomotion<StateFlags, Vector>
     void SetBounds(float x, float y);
     float GetCurrentSpeed();
     void SetLocomotionState(StateFlags state);
-    void SetTarget(Transform target);
-    Transform GetCurrentTarget();
+    void SetTarget(GameObject target);
+    GameObject GetCurrentTarget();
     Vector GetCurrentVelocity();
 }

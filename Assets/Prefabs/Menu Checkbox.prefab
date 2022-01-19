@@ -133,12 +133,12 @@ GameObject:
   - component: {fileID: 8637764339024538745}
   - component: {fileID: 2397662291260304278}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8034675492420020167
 RectTransform:
   m_ObjectHideFlags: 0

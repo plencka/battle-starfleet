@@ -14,7 +14,7 @@ public class FactionSelectionMenu : MonoBehaviour
     [SerializeField]
     private List<Faction> factions = new List<Faction>();
 
-    private Area playBounds = new Area(10,10);
+    private Area playBounds = new Area(15,15);
 
     public List<Faction> GetFactions()
     {

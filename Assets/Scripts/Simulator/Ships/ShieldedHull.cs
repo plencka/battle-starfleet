@@ -14,14 +14,19 @@ public class ShieldedHull : MonoBehaviour
         return component;
     }
 
-    public void ApplyHealth(ShieldedHullData healthSource)
+    public bool ApplyHealth(ShieldedHullData healthSource)
     {
-        healthData.ApplyHealth(healthSource);
+        bool wasHit = healthData.ApplyHealth(healthSource);
+        if (wasHit)
+        {
+            gameObject.GetComponent<Renderer>().material.SetFloat("_healthPercent", healthData.GetHull().GetPercentage());
+        }
+        return wasHit;
     }
 
     public void Update()
     {
-        if (healthData.getHull().IsDepleted())
+        if (healthData.GetHull().IsDepleted())
         {
             Destroy(gameObject);
             return;

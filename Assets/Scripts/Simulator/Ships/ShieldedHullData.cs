@@ -21,17 +21,19 @@ public class ShieldedHullData
         return shield;
     }
 
-    public Health getHull()
+    public Health GetHull()
     {
         return hull;
     }
 
-    public void ApplyHealth(ShieldedHullData healthSource)
+    public bool ApplyHealth(ShieldedHullData healthSource)
     {
         if (healthSource.GetOwner() && healthSource.GetOwner() != owner)
         {
             shield.Points += healthSource.shield.Points;
             hull.Points += healthSource.hull.Points;
+            return true;
         }
+        return false;
     }
 }

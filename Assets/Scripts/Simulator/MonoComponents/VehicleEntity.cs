@@ -16,7 +16,7 @@ public class VehicleEntity : MoveableEntity
         transform.localScale = data.GetScale() * new Vector3(1,1,1);
         TintMaterial.CreateAndAttachTo(gameObject)
             .SetColor(owner.GetColor());
-
+        SetMaxSpeed(data.GetSpeed());
         Blaster blaster = Blaster.CreateAndAttachTo(gameObject);
         blasters.Add(blaster);
         blaster.SetUpBlaster((GameObject)Resources.Load("Prefabs/Projectile", typeof(GameObject)), 25f, new Vector3(0, 0, 0));

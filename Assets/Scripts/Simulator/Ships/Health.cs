@@ -45,7 +45,7 @@ public class Health
     /// <summary>1 represents 100%</summary>
     public float GetPercentage()
     {
-        return currentValue / maxValue;
+        return (float)currentValue / (float)maxValue;
     }
 
     public bool IsDepleted()

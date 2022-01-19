@@ -15,7 +15,7 @@ MonoBehaviour:
   _type: 0
   vehiclePrefab: {fileID: 4895885126481460419, guid: 85ab21ff9b25f3649b3ae1f6e92c7d2a, type: 3}
   _hullPoints: 100
-  _shieldPoints: 100
+  _shieldPoints: 0
   _scale: 1
   _textureName: fighter_chad
   _speed: 3

@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float moveSensitivity = 0.1f;
-    public float dragSensitivity = 4f;
-    public float scrollSensitivity = 0.1f;
-    public float zoomOutLimit = 10f;
+    [SerializeField]
+    private float moveSensitivity = 0.1f;
+    [SerializeField]
+    private float dragSensitivity = 4f;
+    [SerializeField]
+    private float scrollSensitivity = 0.1f;
 
     private CameraControllerData limits;
 
-    public Transform selectedUnitTransform;
+    [SerializeField]
+    private Transform selectedUnitTransform;
     bool isTracking = false;
 
     private Vector3 dragOrigin;
@@ -21,7 +24,7 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        limits = new CameraControllerData(10f, 6f, 0.2f, 10f);
+        limits = new CameraControllerData(10f, 10f, 0.2f, 10f);
         defaultPos = transform.position;
         defaultScale = transform.localScale;
     }
@@ -113,7 +116,7 @@ public class CameraController : MonoBehaviour
             isTracking = false; 
         }
         else if (Input.GetKeyDown(KeyCode.F)) isTracking = true;
-        if (isTracking)
+        if (isTracking && selectedUnitTransform)
         {
             transform.position = new Vector3(selectedUnitTransform.position.x, selectedUnitTransform.position.y, transform.position.z);
         }

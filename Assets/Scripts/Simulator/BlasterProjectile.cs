@@ -36,7 +36,10 @@ public class BlasterProjectile : MonoBehaviour
         ShieldedHull combatant = other.GetComponent<ShieldedHull>();
         if (combatant)
         {
-            combatant.ApplyHealth(healthData);
+            if (combatant.ApplyHealth(healthData))
+            {
+                Destroy(gameObject);
+            };
         }
     }
 }

@@ -10,9 +10,9 @@ public class Checkbox_Sound : CheckboxBase
 
         SetToggle(true);
     }
+
     public override void Toggle()
     {
 
     }
-
 }

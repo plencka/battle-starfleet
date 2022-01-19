@@ -9,10 +9,6 @@ The target Unity version for the project is a stable `2020.3.24f1 LTS` build. It
 > To import the project, clone the repository to a desired location and open the project's root directory using the `ADD` button in Unity Hub. 
 > It should show up on a list of projects if done correctly.
 
-Properly configured project (in initial commit) should display a blinking, rotating texture located in the middle of the starting scene in Play Game mode.
-
-I don't guarantee it will work out-of-the-box, as I never had luck with Package Manager.
-
 ### Forks
 As a contributor, it's not recommended to fork a repository for development. 
 Instead you can contribute directly to the main remote by using steps provided below.

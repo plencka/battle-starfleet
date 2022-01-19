@@ -1,4 +1,4 @@
-class ShieldedHullData
+public class ShieldedHullData
 {
     Faction owner;
     private Health shield;

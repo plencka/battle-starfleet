@@ -14,6 +14,11 @@ public class ShieldedHull : MonoBehaviour
         return component;
     }
 
+    public void ApplyHealth(ShieldedHullData healthSource)
+    {
+        healthData.ApplyHealth(healthSource);
+    }
+
     public void Update()
     {
         if (healthData.getHull().IsDepleted())

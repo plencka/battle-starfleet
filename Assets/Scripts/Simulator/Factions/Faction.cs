@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Starfleet/Simulator/Faction")]
 public class Faction : ScriptableObject, IColorable, INameable
 {
+    private Faction enemyFaction;
+
+    private List<VehicleEntity> ships = new List<VehicleEntity>();
+
     [SerializeField]
     private string factionName;
 
@@ -16,6 +20,26 @@ public class Faction : ScriptableObject, IColorable, INameable
 
     [SerializeField]
     private Color color;
+
+    public void AddVehicle(VehicleEntity vehicle)
+    {
+        ships.Add(vehicle);
+    }
+
+    public VehicleEntity GetRandomVehicle()
+    {
+        return ships[Random.Range(0, ships.Count)];
+    }
+
+    public Faction GetEnemyFaction()
+    {
+        return enemyFaction;
+    }
+
+    public void SetEnemyFaction(Faction otherFaction)
+    {
+        enemyFaction = otherFaction;
+    }
 
     public ShipSet GetShipSet()
     {

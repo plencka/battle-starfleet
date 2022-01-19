@@ -24,6 +24,8 @@ public class FactionSelectionMenu : MonoBehaviour
     public void GenerateSimulation()
     {
         gameObject.SetActive(false);
+        leftTeam.GetFaction().SetEnemyFaction(rightTeam.GetFaction());
+        rightTeam.GetFaction().SetEnemyFaction(leftTeam.GetFaction());
         CreateUnits(25, ShipSet.ShipTypes.kFighter, leftTeam.GetFaction());
         CreateUnits(25, ShipSet.ShipTypes.kFighter, rightTeam.GetFaction());
     }
@@ -38,9 +40,11 @@ public class FactionSelectionMenu : MonoBehaviour
         {
             GameObject ship = Instantiate(prefab);
             ship.transform.position = playBounds.GetRandomPointInArea();
-            ship.GetComponent<VehicleEntity>().SetOwner(faction);
-            ship.GetComponent<VehicleEntity>().SetShipType(faction.GetShipSet().GetShipType(type));
-            ship.GetComponent<VehicleEntity>().SetPlayArea(playBounds);
+            VehicleEntity vehicle = ship.GetComponent<VehicleEntity>();
+            vehicle.SetOwner(faction);
+            vehicle.SetShipType(faction.GetShipSet().GetShipType(type));
+            vehicle.SetPlayArea(playBounds);
+            faction.AddVehicle(vehicle);
         }
     }
 

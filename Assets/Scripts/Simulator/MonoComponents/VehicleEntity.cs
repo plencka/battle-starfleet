@@ -29,7 +29,14 @@ public class VehicleEntity : MoveableEntity
     private void Update()
     {
         Move();
-        foreach(Blaster blaster in blasters)
+        if (!_currentTarget)
+        {
+            VehicleEntity other = owner.GetEnemyFaction().GetRandomVehicle();
+            if (other) {
+                _currentTarget = other.gameObject;
+            }
+        }
+        foreach (Blaster blaster in blasters)
         {
             blaster.Shoot(GetCurrentTarget());
         }

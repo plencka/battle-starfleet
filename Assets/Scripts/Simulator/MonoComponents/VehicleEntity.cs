@@ -12,6 +12,8 @@ public class VehicleEntity : MoveableEntity
 
     void Start()
     {
+        ShieldedHull.CreateComponent(gameObject, data.GetHullPoints(), data.GetShieldPoints(), owner);
+        transform.localScale = data.GetScale() * new Vector3(1,1,1);
         TintMaterial.CreateAndAttachTo(gameObject)
             .SetColor(owner.GetColor());
 

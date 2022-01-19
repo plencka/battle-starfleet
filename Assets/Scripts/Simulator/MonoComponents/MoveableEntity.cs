@@ -11,7 +11,7 @@ public enum LocomotionState
     kVFormation
 }
 
-public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionState, Vector2>
+public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionState>
 {
     public LocomotionState _currentState = LocomotionState.kWander;
 
@@ -19,29 +19,31 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
     private float _maxSpeed = 3;
     private float _speedUpValue = 0.5f;
     private float _currentSpeed = 0;
-    private float Speed {
-        get => _currentSpeed;
-        set
+
+    private float GetSpeed()
+    {
+        return _currentSpeed;
+    }
+
+    private void SetSpeed(float value)
+    {
+        if (value > _maxSpeed)
         {
-            if (value > _maxSpeed)
-            {
-                _currentSpeed = _maxSpeed;
-            }
-            else if (value < 0)
-            {
-                _currentSpeed = 0;
-            }
-            else
-            {
-                _currentSpeed = value;
-            }
+            _currentSpeed = _maxSpeed;
+        }
+        else if (value < 0)
+        {
+            _currentSpeed = 0;
+        }
+        else
+        {
+            _currentSpeed = value;
         }
     }
 
     public GameObject _currentTarget;
 
     private Vector2 targetPoint = new Vector2(0, 0);
-    private Vector2 boundArea = new Vector2(10, 10);
 
     private Vector2 _positionPrevious = new Vector2(0, 0);
     private Vector2 _positionCurrent = new Vector2(0, 0);
@@ -49,9 +51,16 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
     private float _lastChangeTimestamp = 0;
     private readonly float _targetPointChangeDelay = 3;
 
+    private Area playArea;
+
+    public void SetPlayArea(Area playBounds)
+    {
+        playArea = playBounds;
+    }
+
     private void MoveTowardsPoint(Vector2 point)
     {
-        Speed += _speedUpValue * Time.deltaTime;
+        SetSpeed(GetSpeed() + _speedUpValue * Time.deltaTime);
         Vector2 dir = point + new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)) - _positionCurrent;
         float angle = Vector2.SignedAngle(transform.up, dir);
         transform.Rotate(new Vector3(0, 0, 1), angle * 1.5f * Time.deltaTime);
@@ -61,7 +70,7 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
 
     private void None()
     {
-        Speed -= 2 * _speedUpValue * Time.deltaTime;
+        SetSpeed(GetSpeed() - 2 * _speedUpValue * Time.deltaTime);
     }
     private void Follow()
     {
@@ -111,8 +120,7 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
         if(_lastChangeTimestamp + _targetPointChangeDelay < Time.time)
         {
             _lastChangeTimestamp = Time.time;
-            targetPoint = new Vector2(Random.Range(-boundArea.x, boundArea.x),
-                Random.Range(-boundArea.y, boundArea.y));
+            targetPoint = playArea.GetRandomPointInArea();
         }
         MoveTowardsPoint(targetPoint);
     }
@@ -164,11 +172,6 @@ public abstract class MoveableEntity : MonoBehaviour, ILocomotion<LocomotionStat
         }
 
         _positionCurrent = transform.position;
-    }
-
-    public void SetBounds(float x, float y)
-    {
-        throw new System.NotImplementedException();
     }
 
     public void SetLocomotionState(LocomotionState state)

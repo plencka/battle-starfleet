@@ -13,12 +13,11 @@ public class ShipType : ScriptableObject
 
     [SerializeField]
     [Range(0f,100000f)]
+    private int _hullPoints;
 
-    private float _hullPoints;
     [SerializeField]
-
     [Range(0f, 100000f)]
-    private float _shieldPoints;
+    private int _shieldPoints;
 
     [SerializeField]
     [Range(0f, 10f)]
@@ -30,6 +29,26 @@ public class ShipType : ScriptableObject
     [SerializeField]
     [Range(0f, 1000f)]
     private float _speed;
+
+    public int GetHullPoints()
+    {
+        return _hullPoints;
+    }
+
+    public int GetShieldPoints()
+    {
+        return _shieldPoints;
+    }
+
+    public float GetScale()
+    {
+        return _scale;
+    }
+
+    public float GetSpeed()
+    {
+        return _speed;
+    }
 
     public Texture GetDiffuseTexture()
     {

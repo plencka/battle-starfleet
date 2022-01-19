@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class Area
 {
     public float x;
@@ -15,5 +17,12 @@ public class Area
             return true;
         }
         return false;
+    }
+
+
+    public Vector2 GetRandomPointInArea()
+    {
+        return new Vector2(Random.Range(-x, x),
+                Random.Range(-y, y));
     }
 }

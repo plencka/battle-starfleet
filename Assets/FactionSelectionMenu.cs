@@ -14,6 +14,8 @@ public class FactionSelectionMenu : MonoBehaviour
     [SerializeField]
     private List<Faction> factions = new List<Faction>();
 
+    private Area playBounds = new Area(10,10);
+
     public List<Faction> GetFactions()
     {
         return factions;
@@ -35,8 +37,10 @@ public class FactionSelectionMenu : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             GameObject ship = Instantiate(prefab);
+            ship.transform.position = playBounds.GetRandomPointInArea();
             ship.GetComponent<VehicleEntity>().SetOwner(faction);
             ship.GetComponent<VehicleEntity>().SetShipType(faction.GetShipSet().GetShipType(type));
+            ship.GetComponent<VehicleEntity>().SetPlayArea(playBounds);
         }
     }
 

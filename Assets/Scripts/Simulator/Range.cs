@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class Range
 {
-    public float a;
-    public float b;
-    
+    public float a { get; }
+    public float b { get; }
+
     public Range(float a, float b)
     {
         this.a = a;

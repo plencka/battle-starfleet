@@ -7,9 +7,13 @@ using UnityEditor;
 
 public class Button_Options : ButtonBase
 {
-    public GameObject optionsScreen;
+    [SerializeField]
+    private GameObject optionsScreen;
+    [SerializeField]
+    private GameObject menuScreen;
     public override void Click()
     {
         optionsScreen.SetActive(true);
+        menuScreen.SetActive(false);
     }
 }

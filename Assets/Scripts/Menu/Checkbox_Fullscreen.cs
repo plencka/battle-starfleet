@@ -8,7 +8,6 @@ public class Checkbox_Fullscreen : CheckboxBase
     void Start()
     {
         base.Start();
-
         SetToggle(Screen.fullScreen);
     }
 
@@ -16,5 +15,4 @@ public class Checkbox_Fullscreen : CheckboxBase
     {
         Screen.fullScreen = isToggled;
     }
-
 }

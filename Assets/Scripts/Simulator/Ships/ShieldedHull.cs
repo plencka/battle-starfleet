@@ -28,7 +28,10 @@ public class ShieldedHull : MonoBehaviour
     {
         if (healthData.GetHull().IsDepleted())
         {
-            Destroy(gameObject);
+            Destroy(gameObject, 5);
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            gameObject.GetComponent<Rigidbody>().detectCollisions = false;
             return;
         }
     }

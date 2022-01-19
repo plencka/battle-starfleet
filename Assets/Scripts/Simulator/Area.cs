@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Area
 {
-    public float x;
-    public float y;
+    public float x { get; }
+    public float y { get; }
     public Area(float x, float y)
     {
         this.x = x;

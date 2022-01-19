@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class CameraControllerData
 {
-    public Area area;
-    public Range zoom;
+    private Area area;
+    private Range zoom;
 
     public CameraControllerData(float areaX, float areaY, float inner, float outer)
     {
         area = new Area(areaX, areaY);
         zoom = new Range(inner, outer);
+    }
+
+    public Area GetArea()
+    {
+        return area;
+    }
+
+    public Range GetZoom()
+    {
+        return zoom;
     }
 }

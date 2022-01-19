@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Faction_03
   m_EditorClassIdentifier: 
   factionName: The Chads
-  icon: {fileID: 21300000, guid: 747c0ba6d77999c47b50984a3a60a5f4, type: 3}
+  icon: {fileID: 21300000, guid: db573bf30a0752a429d5a5a32d828f6e, type: 3}
   shipSet: {fileID: 11400000, guid: 9c033bee8790d7146aaf300b3b6d683c, type: 2}
   color: {r: 0.41585082, g: 0.8396226, b: 0.63687694, a: 1}

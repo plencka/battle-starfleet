@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
-public class Button_Start : ButtonBase
+public class Button_ChangeScene : ButtonBase
 {
-    public string mainScene;
+    [SerializeField]
+    private string sceneName;
     public override void Click()
     {
-        SceneManager.LoadScene(mainScene);
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -41,21 +41,22 @@ public class CameraController : MonoBehaviour
 
     void Bound()
     {
-        if (transform.position.x < -limits.area.x)
+        Area playableArea = limits.GetArea();
+        if (transform.position.x < -playableArea.x)
         {
-            transform.position = new Vector3(-limits.area.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-playableArea.x, transform.position.y, transform.position.z);
         }
-        else if(transform.position.x > limits.area.x)
+        else if(transform.position.x > playableArea.x)
         {
-            transform.position = new Vector3(limits.area.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(playableArea.x, transform.position.y, transform.position.z);
         }
-        if (transform.position.y < -limits.area.y)
+        if (transform.position.y < -playableArea.y)
         {
-            transform.position = new Vector3(transform.position.x, -limits.area.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -playableArea.y, transform.position.z);
         }
-        else if (transform.position.y > limits.area.y)
+        else if (transform.position.y > playableArea.y)
         {
-            transform.position = new Vector3(transform.position.x, limits.area.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, playableArea.y, transform.position.z);
         }
     }
 
@@ -99,7 +100,7 @@ public class CameraController : MonoBehaviour
     void Zoom()
     {
         float deltaZoom = -Input.mouseScrollDelta.y * scrollSensitivity * Time.fixedDeltaTime;
-        if (limits.zoom.Contains(transform.localScale.x + deltaZoom))
+        if (limits.GetZoom().Contains(transform.localScale.x + deltaZoom))
         {
             transform.localScale += new Vector3(deltaZoom, deltaZoom, deltaZoom);
         }

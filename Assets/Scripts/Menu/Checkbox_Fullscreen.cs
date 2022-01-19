@@ -9,16 +9,12 @@ public class Checkbox_Fullscreen : CheckboxBase
     {
         base.Start();
 
-        isToggled = PlayerPrefs.GetInt("isFullscreenOn") == 1;
-        if (isToggled) checkboxImage.SetActive(true);  
+        SetToggle(Screen.fullScreen);
     }
 
-    public override void Click()
+    public override void Toggle()
     {
-        Toggle();
-
         Screen.fullScreen = isToggled;
     }
-
 
 }

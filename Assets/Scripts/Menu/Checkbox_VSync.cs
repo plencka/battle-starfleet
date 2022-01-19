@@ -9,13 +9,10 @@ public class Checkbox_VSync : CheckboxBase
     {
         base.Start();
 
-        isToggled = PlayerPrefs.GetInt("isVSyncOn") == 1;
-        if (isToggled) checkboxImage.SetActive(true);
+        SetToggle(QualitySettings.vSyncCount > 0);
     }
-    public override void Click()
+    public override void Toggle()
     {
-        Toggle();
-
         if (isToggled) QualitySettings.vSyncCount = 1;
         else QualitySettings.vSyncCount = 0;
     }

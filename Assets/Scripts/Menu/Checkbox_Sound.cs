@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class Checkbox_Sound : CheckboxBase
 {
-
     void Start()
     {
         base.Start();
 
-        isToggled = PlayerPrefs.GetInt("isSoundOn") == 1;
-        if (isToggled) checkboxImage.SetActive(true);
+        SetToggle(true);
     }
-    public override void Click()
+    public override void Toggle()
     {
-        Toggle();
 
-        if (isToggled) AudioListener.volume = 1f;
-        else AudioListener.volume = 0f;
     }
-
 
 }

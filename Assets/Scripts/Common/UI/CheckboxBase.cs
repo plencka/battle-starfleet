@@ -5,20 +5,37 @@ using UnityEngine;
 public abstract class CheckboxBase : ButtonBase
 {
     protected bool isToggled;
-    public GameObject checkboxImage;
+    private GameObject checkmarkObject;
 
-    public void Toggle()
+    protected void Start()
+    {
+        base.Start();
+        checkmarkObject = transform.Find("Checkmark").gameObject;
+        isToggled = checkmarkObject.activeSelf;
+    }
+
+    public abstract void Toggle();
+
+    public override void Click()
     {
         if (isToggled)
         {
-            checkboxImage.SetActive(false);
+            SetToggle(false);
         }
         else
         {
-            checkboxImage.SetActive(true);
+            SetToggle(true);
         }
 
-        isToggled = !isToggled;
+        Toggle();
     }
 
+    public void SetToggle(bool status)
+    {
+        if (isToggled != status)
+        {
+            checkmarkObject.SetActive(status);
+            isToggled = !isToggled;
+        }
+    }
 }

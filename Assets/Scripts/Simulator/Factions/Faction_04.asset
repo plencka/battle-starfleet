@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9897ce65f9793574b948d8d3aa8c174b, type: 3}
   m_Name: Faction_04
   m_EditorClassIdentifier: 
-  factionName: Rebels
+  factionName: The Rebels
   icon: {fileID: 21300000, guid: 747c0ba6d77999c47b50984a3a60a5f4, type: 3}
   shipSet: {fileID: 11400000, guid: 544dd16851cdb334fa6197ef1ef5347c, type: 2}
   color: {r: 0, g: 0.44111133, b: 1, a: 1}

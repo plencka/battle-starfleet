@@ -1,44 +1,26 @@
-# battle-starfleet
-A group college project thing.
-
 <p align="center">
-  <img src="/.github/main_menu.PNG?raw=true" />
+  <img src="/.github/images/main_menu.PNG?raw=true" />
 </p>
 
-## Setup
+# battle-starfleet
+[![Github License](https://img.shields.io/github/license/plencka/battle-starfleet)](/LICENSE)
+[![Github Top Language](https://img.shields.io/github/languages/top/plencka/battle-starfleet)]()
+[![Github Repo Size](https://img.shields.io/github/repo-size/plencka/battle-starfleet)]()
+
+The spaceship battle simulator game developed in Unity 2D for the college course group project is an exciting and innovative gaming experience that focuses on AI battles. Unlike traditional games that rely on player input, this game allows players to choose two teams of spaceships and watch as the teams engage in battles automatically.
+
+## Gameplay
+
+In the Battle Starfleet, players select a team of spaceships from a drop-down menu and start the simulation to observe AI-controlled battles. Players can control the camera with the mouse, reset or end the simulation using on-screen keys, and customize the gameplay experience with fullscreen and vsync options.
+
+### Video
+https://user-images.githubusercontent.com/49527545/224149705-a864c804-1d7b-4992-9494-1bb89b296810.mp4
+
+## Development
 
 ### Unity
-The target Unity version for the project is a stable `2020.3.24f1 LTS` build. It's endorsed to use that version for best compatibility.
+The target [Unity](https://unity.com/download) version for the project is a stable `2020.3.24f1 LTS` build. It's endorsed to use that version for best compatibility.
 
-> To import the project, clone the repository to a desired location and open the project's root directory using the `ADD` button in Unity Hub. 
-> It should show up on a list of projects if done correctly.
+To import the project, clone the repository to a desired location and open the project's root directory using the `ADD` button in [Unity Hub](https://unity.com/unity-hub). <br>
+It should show up on a list of projects if done correctly.
 
-### Forks
-As a contributor, it's not recommended to fork a repository for development. 
-Instead you can contribute directly to the main remote by using steps provided below.
-After you're done with the project, you're welcome to fork the project to attach it to your own profile.
-
-## Contributing
-To ensure ease of work and no headaches, consider following provided steps:
-
-1. Before making changes, create an issue and/or assign yourself to be sure we're not working on the same thing.
-
-2. Use issues to discuss ideas, bugs and features.
-    * ....Instead of external communicators and making my phone ring at 4:00am...
-    * Or having to scroll a conversation to find a thing mentioned a week ago. 
-    * Alternatively just copy any important information into issues.
-
-3. Create branches for each independant feature. I don't think `camera-controller` branch should contain changes related to AI logic.
-    * You can also attach a number of related issue for more visual feedback to the naming scheme.
-    * Keep names relevant, so nobody will wonder what `testing-test` branch is for. Same for commits. :rage:
-
-4. You may notice that you're not able to push changes directly to the `main` branch.
-This repository requires Pull Requests which need to be approved by other contributors. 
-    * Pull Requests can be created from different branches. 
-    * In others words: Don't worry, you shouldn't be able to delete the project by accident.
-
-5. If you have trouble doing something and it stalls your development, communicate. Others might know and save your time.
-
-6. If it's broken, don't make a Pull Request (unless it's a [draft](https://github.blog/2019-02-14-introducing-draft-pull-requests/) and you need help).
-
-7. If I forgot to mention anything and you're stuck, or you don't agree with something, ask. :slightly_smiling_face:

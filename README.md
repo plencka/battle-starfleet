@@ -11,7 +11,7 @@ The spaceship battle simulator game developed in Unity 2D for the college course
 
 ## Gameplay
 
-In the Spaceship Battle Simulator, players select a team of spaceships from a drop-down menu and start the simulation to observe AI-controlled battles. Players can control the camera with the mouse, reset or end the simulation using on-screen keys, and customize the gameplay experience with fullscreen and vsync options.
+In the Battle Starfleet, players select a team of spaceships from a drop-down menu and start the simulation to observe AI-controlled battles. Players can control the camera with the mouse, reset or end the simulation using on-screen keys, and customize the gameplay experience with fullscreen and vsync options.
 
 https://user-images.githubusercontent.com/49527545/224149705-a864c804-1d7b-4992-9494-1bb89b296810.mp4
 

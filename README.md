@@ -2,7 +2,7 @@
 A group college project thing.
 
 <p align="center">
-  <img src="/.github/main_menu.PNG?raw=true" />
+  <img src="/.github/images/main_menu.PNG?raw=true" />
 </p>
 
 ## Setup
